@@ -1,0 +1,328 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+:root {
+    --amarelo: #F5B000;
+    --amarelo-claro: #FFF8E7;
+
+    --verde: #1A6B4A;
+    --verde-claro: #EAF4EE;
+
+    --cinza: #F7F6F2;
+
+    --texto: #1C1C1A;
+    --texto-suave: #5A5A55;
+
+    --branco: #ffffff;
+
+    --borda: #E3E1D8;
+
+    --radius: 14px;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--texto);
+    background: var(--branco);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+
+header {
+    position: sticky;
+    top: 0;
+
+    background: rgba(255,255,255,0.92);
+
+    border-bottom: 1px solid var(--borda);
+
+    padding: 0 5%;
+}
+
+.navbar {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 66px;
+}
+
+.logo-marca {
+    text-decoration: none;
+
+    color: var(--texto);
+
+    font-family: 'Fraunces', serif;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icone {
+    width: 32px;
+    height: 32px;
+
+    background: var(--amarelo);
+
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+    gap: 36px;
+}
+
+nav ul li a {
+    text-decoration: none;
+
+    color: var(--texto-suave);
+
+    transition: 0.2s;
+}
+
+nav ul li a:hover {
+    color: var(--texto);
+}
+
+.btn-nav {
+    background: var(--texto);
+
+    color: white !important;
+
+    padding: 10px 20px;
+
+    border-radius: 50px;
+}
+
+
+#inicio {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 100px 5%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+.hero-tag {
+    background: var(--amarelo-claro);
+
+    padding: 8px 16px;
+
+    border-radius: 50px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 24px;
+}
+
+.hero-tag-dot {
+    width: 7px;
+    height: 7px;
+
+    background: var(--amarelo);
+
+    border-radius: 50%;
+}
+
+.hero-titulo {
+    font-family: 'Fraunces', serif;
+
+    font-size: 3rem;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.hero-titulo em {
+    color: var(--verde);
+}
+
+.hero-desc {
+    color: var(--texto-suave);
+
+    margin-bottom: 36px;
+
+    max-width: 500px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 16px;
+}
+
+.btn-primario {
+    background: var(--amarelo);
+
+    color: var(--texto);
+
+    text-decoration: none;
+
+    padding: 14px 28px;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.btn-primario:hover {
+    transform: translateY(-2px);
+}
+
+.btn-secundario {
+    border: 1px solid var(--borda);
+
+    text-decoration: none;
+
+    color: var(--texto);
+
+    padding: 14px 28px;
+
+    border-radius: 50px;
+}
+
+
+#beneficio {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 90px 5%;
+}
+
+.secao-topo {
+    margin-bottom: 50px;
+}
+
+.secao-label {
+    color: var(--verde);
+
+    text-transform: uppercase;
+
+    font-size: 0.8rem;
+
+    margin-bottom: 10px;
+}
+
+.secao-titulo {
+    font-family: 'Fraunces', serif;
+
+    font-size: 2.5rem;
+}
+
+.beneficios-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.beneficio-card {
+    background: var(--cinza);
+
+    border: 1px solid var(--borda);
+
+    border-radius: var(--radius);
+
+    padding: 32px;
+
+    transition: 0.2s;
+}
+
+.beneficio-card:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--amarelo);
+}
+
+.bcard-titulo {
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+.bcard-desc {
+    color: var(--texto-suave);
+}
+
+footer {
+    background: var(--texto);
+
+    color: rgba(255,255,255,0.5);
+
+    padding: 40px 5%;
+}
+
+.footer-inner {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    font-family: 'Fraunces', serif;
+}
+
+.footer-copy {
+    font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+
+    #inicio {
+        grid-template-columns: 1fr;
+    }
+
+    .beneficios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
